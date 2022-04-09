@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="css/about.css">
+ <title>Document</title>
+</head>
+<body>
+ 
+
+<section>
+ <header>
+ <nav class="navbar__container">
+   <h1 class="header">OSFIC</h1>
+  <ul class="nav-links">
+ <li class="navbar__button"><a class="navbar__text" href="index.html">HOME</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="resources.html">RESOURCES</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="pitches.html">PITCHES</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="contact.html">CONTACT</a></li>
+ <li class="navbar__button"><a class="navbar__text" id="about" href="about.html">ABOUT US</a></li>
+ </ul>
+ <div class="burger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ </nav>
+ </header>
+ </section>
+
+ <div id="titles">Meet our team!</div>
+ <div class="container">
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-makes-okay-gesture-demonstrates-agreement-likes-idea-smiles-happily-wears-optical-glasses-yellow-hat-t-shirt-models-indoor-its-fine-thank-you-hand-sign_273609-30676.jpg?size=626&ext=jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Karan Singh</br>
+                <span>Graphic Designer</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Dolly Seth</br>
+                <span>Digital Marketing</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Aakash Agrawal</br>
+                <span>C.A</span></h2>
+            </div>
+        </div>
+    </div>
+
+    
+ <script src="./app.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script>
+  $(document).ready(function() {
+   $(window).on('scroll', function() {
+    if ($(window).scrollTop()) {
+     $(".nav-links").addClass('bgc');
+    } else {
+     $(".nav-links").removeClass('bgc');
+    }
+   });
+  });
+ </script>
+ <script>
+    $(document).ready(function(){       
+        var scroll_pos = 0;
+        $(document).scroll(function() { 
+            scroll_pos = $(this).scrollTop();
+            if(scroll_pos > 1000 && scroll_pos < 1400) {
+                $('#primary__message').css('color', '#f0f');
+            } else if (scroll_pos > 1000) {
+                $('#primary__message').css('color', '#0f0');
+            } else {
+                $('#primary__message').css('color', '#fff');
+            }
+        });
+    });
+  </script>
+  <script src="scroll.js"></script>
+</body>
+</html>
