@@ -7,7 +7,7 @@ const navSlide = () => {
  });
 }
 
-  var $findme = $('#numbers');
+var $findme = $('#numbers');
 var exec = false;
 function Scrolled() {
   $findme.each(function() {

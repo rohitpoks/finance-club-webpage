@@ -3,7 +3,37 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 50;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+
+function reveal__horizontal() {
+  var reveals = document.querySelectorAll(".reveal__horizontal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
     var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+
+function reveal__horizontal__in() {
+  var reveals = document.querySelectorAll(".reveal__horizontal__in");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 500;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
     } else {
@@ -44,6 +74,10 @@ function showSlides(n) {
 }
 
 window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", reveal__horizontal);
+window.addEventListener("scroll", reveal__horizontal__in);
 
 // To check the scroll position on page load
 reveal();
+reveal__horizontal();
+reveal__horizontal__in();
