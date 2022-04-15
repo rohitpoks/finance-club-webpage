@@ -35,6 +35,13 @@ body {
   border: 3px solid rgb(130, 238, 144);
 }
 
+
+.gallery__container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+
 .navbar__text {
   text-decoration: none;
   font-size: 16px;
@@ -86,10 +93,46 @@ body {
   margin-left: 10%;
   margin-right: 90%;
 }
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  transition: 500ms;
+}
+
+div.gallery:hover {
+  border: 2px solid rgb(240, 205, 7);
+  width: 300px;
+  height: auto;
+  transition: 500ms;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 1024px) {
+  
   body {
     overflow-x: hidden;
   }
+  div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  transition: 500ms;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery__container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
   .nav-links {
     position: fixed;
     height: 92vh;
@@ -239,25 +282,6 @@ body {
   opacity: 1;
 }
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 250px;
-  transition: 500ms;
-}
-
-div.gallery:hover {
-  border: 2px solid rgb(240, 205, 7);
-  width: 300px;
-  height: auto;
-  transition: 500ms;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
 
 div.desc {
   padding: 15px;
@@ -265,11 +289,6 @@ div.desc {
   color: white;
 }
 
-.gallery__container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 200px;
-}
 
 #description__container {
   margin-top: 50px;
