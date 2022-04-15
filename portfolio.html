@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="css/styles.css">
+ <title>Document</title>
+</head>
+<body>
+ 
+
+<section>
+ <header>
+ <nav class="navbar__container">
+   <h1 class="header">OSFIC</h1>
+  <ul class="nav-links">
+ <li class="navbar__button"><a class="navbar__text" href="index.html">HOME</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="resources.html">RESOURCES</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="pitches.html">PITCHES</a></li>
+  <li class="navbar__button"> <a class="navbar__text" href="portfolio.html">PORTFOLIO</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="contact.html">CONTACT</a></li>
+ <li class="navbar__button"><a class="navbar__text" id="about" href="about.html">ABOUT US</a></li>
+ </ul>
+ <div class="burger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ </nav>
+ </header>
+ </section>
+<img src="img/portfolio.png" alt="" style="max-width: 100%; height: auto;">
+<h2 id="ptext"> Learn more about our holdings and Investment Strategy</h2>
+<p class="pnormalcenter"> The Oberlin College Finance and Investment Club has over $<span>370</span>,<span>000</span> of Assets Under Management. We primarily invest in domestically traded equities and fixed income products. 
+</p>
+<p class="pnormalcenter">View our portfolio below:</p>
+<a class="navbar__text" id="pbox" target="_blank" href="https://docs.google.com/spreadsheets/d/1HqHUX1TLxGA278ldi8bAKYrfm2NmpnrFS6EVWUQx-Dg/edit?usp=sharing" style="display: block; margin-left: 30%; margin-right: 30%;">VIEW PORTFOLIO</a>
+<h2 id="ptext"> Our Investment Strategy</h2>
+<p class="pnormalcenter"> The Oberlin Finance and Investment club looks to bring together the skills of liberal arts education and marry them with "hardcore" financial analysis. </p>
+<br><br>
+
+<p class="pnormal">That being said when the club looks to make an investment two questions are asked: </p>
+<ol>
+<li class="pbullet">What is our over-arching market view?</li>
+<li class="pbullet">Do the financials of this company show us, that given our view, this company will have success?</li>
+</ol>
+<br><br>
+<p class="pnormal"> We answer the above questions as follows: </p>
+<ul>
+    <li class="pbullet">
+        First we develop an economic view
+        <ul>
+            <li class="pbullet">
+                We look at macroeconomic indictors and industry research to get a sense market movement
+            </li>
+        </ul>
+    </li>
+    <li class="pbullet">
+        Then we analyze a company's financial health
+        <ul>
+            <li class="pbullet">
+                We take in depth looks at a company's
+            </li>
+            <ul>
+                <li class="pbullet">
+                    Balance sheet strength
+                </li>
+                <li class="pbullet">
+                    Income statements
+                </li>
+                <li class="pbullet">
+                    Cash Flows
+                </li>
+                <li class="pbullet">
+                    Key Financial ratios
+                    <ul>
+                        <li class="pbullet">
+                            Debt to Asset Ratio
+                        </li>
+
+                        <li class="pbullet">
+                            Profit Margin
+                        </li>
+                        <li class="pbullet">
+                            Asset Turnover
+                        </li>
+                        <li class="pbullet">
+                            EBITDA
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </li>
+</ul>
+<p class="pnormal"> The above constitutes a brief summary, if you are interested in learning more about how the club makes valuations please come out to a meeting.</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="./app.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script>
+  $(document).ready(function() {
+   $(window).on('scroll', function() {
+    if ($(window).scrollTop()) {
+     $(".nav-links").addClass('bgc');
+    } else {
+     $(".nav-links").removeClass('bgc');
+    }
+   });
+  });
+ </script>
+ <script>
+    $(document).ready(function(){       
+        var scroll_pos = 0;
+        $(document).scroll(function() { 
+            scroll_pos = $(this).scrollTop();
+            if(scroll_pos > 1000 && scroll_pos < 1400) {
+                $('#primary__message').css('color', '#f0f');
+            } else if (scroll_pos > 1000) {
+                $('#primary__message').css('color', '#0f0');
+            } else {
+                $('#primary__message').css('color', '#fff');
+            }
+        });
+    });
+  </script>
+  <script src="scroll.js"></script>
+</body>
+</html>

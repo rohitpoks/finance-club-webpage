@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/styles.css">
+ <title>Document</title>
+</head>
+<body>
+ <section>
+ <header>
+ <nav class="navbar__container">
+   <h1 class="header">OSFIC</h1>
+  <ul class="nav-links">
+ <li class="navbar__button"><a class="navbar__text" href="index.html">HOME</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="resources.html">RESOURCES</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="pitches.html">PITCHES</a></li>
+  <li class="navbar__button"> <a class="navbar__text" href="portfolio.html">PORTFOLIO</a></li>
+ <li class="navbar__button"><a class="navbar__text" href="contact.html">CONTACT</a></li>
+ <li class="navbar__button"><a class="navbar__text" id="about" href="about.html">ABOUT US</a></li>
+ </ul>
+ <div class="burger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ </nav>
+ </header>
+ </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="./app.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script>
+  $(document).ready(function() {
+   $(window).on('scroll', function() {
+    if ($(window).scrollTop()) {
+     $(".nav-links").addClass('bgc');
+    } else {
+     $(".nav-links").removeClass('bgc');
+    }
+   });
+  });
+ </script>
+ <script>
+    $(document).ready(function(){       
+        var scroll_pos = 0;
+        $(document).scroll(function() { 
+            scroll_pos = $(this).scrollTop();
+            if(scroll_pos > 1000 && scroll_pos < 1400) {
+                $('#primary__message').css('color', '#f0f');
+            } else if (scroll_pos > 1000) {
+                $('#primary__message').css('color', '#0f0');
+            } else {
+                $('#primary__message').css('color', '#fff');
+            }
+        });
+    });
+  </script>
+  <script src="scroll.js"></script>
+</body>
+</html>
