@@ -2,6 +2,7 @@ body {
  font-family:monospace;
  background-color: rgb(20, 20, 29);
  overflow-x: hidden;
+ background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?t=st=1650000606~exp=1650001206~hmac=24ab101945a0f23ccb8b75eb76659f744edd132d9a7c2aa9a0f6e2826d328795&w=1480);
 }
 .navbar__container {
  display: flex;

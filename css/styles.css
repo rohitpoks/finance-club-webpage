@@ -2,11 +2,27 @@ body {
   font-family: monospace;
   background-color: rgb(20, 20, 29);
   overflow-x: hidden;
+  background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?t=st=1650000606~exp=1650001206~hmac=24ab101945a0f23ccb8b75eb76659f744edd132d9a7c2aa9a0f6e2826d328795&w=1480);
 }
+
+.map__enclosed {
+  /* align-self doesn't let flex-div expand */
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 300px;
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
 }
 
 .description {
@@ -29,8 +45,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?t=st=1650000606~exp=1650001206~hmac=24ab101945a0f23ccb8b75eb76659f744edd132d9a7c2aa9a0f6e2826d328795&w=1480);
-  background-blend-mode:darken;
+  background: transparent;
+  background-blend-mode: darken;
   background-position: 50% 0;
   border: 3px solid rgb(130, 238, 144);
 }
@@ -38,7 +54,7 @@ body {
 
 .gallery__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 200px;
 }
 
@@ -99,6 +115,8 @@ div.gallery {
   float: left;
   width: 250px;
   transition: 500ms;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 div.gallery:hover {
@@ -126,6 +144,12 @@ div.gallery img {
   transition: 500ms;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
 }
 .gallery__container {
   display: flex;
@@ -191,6 +215,14 @@ div.gallery img {
   .header {
     display: none;
   }
+
+  .map__enclosed {
+  /* align-self doesn't let flex-div expand */
+  align-self: flex-start;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
 .nav-active {
@@ -236,11 +268,12 @@ div.gallery img {
 }
 
 .image__block {
+  position: relative;
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
-  width: 90%;
+  height: auto;
+  width: 60%;
   padding: auto;
   display: block;
   transition: 0.5s;
@@ -583,3 +616,66 @@ ul {
   margin-bottom: 30px;
 }
 
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.form__container {
+  border-radius: 5px;
+  background-color: #f2f2f24d;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
+.join__us__button {
+  margin-top: 60px; 
+  margin-left:30px; 
+  margin-right: 30px; 
+  background-color: lightseagreen; 
+  border: 3px solid black; 
+  text-decoration: none; 
+  text-align: center; 
+  display: block;
+}
+
+.join__us__button:hover{
+  margin-top: 60px; 
+  margin-left:30px; 
+  margin-right: 30px; 
+  background-color: rgb(32, 47, 178); 
+  transition: 500ms;
+  border: 3px solid black; 
+  text-decoration: none; 
+  text-align: center; 
+  display: block;
+}
