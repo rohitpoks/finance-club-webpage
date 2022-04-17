@@ -5,12 +5,22 @@ body {
   background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?t=st=1650000606~exp=1650001206~hmac=24ab101945a0f23ccb8b75eb76659f744edd132d9a7c2aa9a0f6e2826d328795&w=1480);
 }
 
+
+/* Add a background color and some padding around the form */
+.form__container {
+  border-radius: 5px;
+  width: 50%;
+  background-color: #f2f2f24d;
+  padding: 20px;
+}
+
+
 .map__enclosed {
   /* align-self doesn't let flex-div expand */
   align-self: flex-start;
-  margin-left: 30px;
-  margin-right: 30px;
-  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
 .navbar__container {
@@ -133,6 +143,16 @@ div.gallery img {
 
 @media screen and (max-width: 1024px) {
   
+  .form__container {
+    flex: 0;
+  border-radius: 5px;
+  width: auto;
+  background-color: #f2f2f24d;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -148,8 +168,9 @@ div.gallery img {
 
 .contact__container {
   display: flex;
-  flex-direction: column;
-  justify-content:space-around;
+  flex-direction: column-reverse;
+  justify-content: center;
+  
 }
 .gallery__container {
   display: flex;
@@ -217,12 +238,11 @@ div.gallery img {
   }
 
   .map__enclosed {
-  /* align-self doesn't let flex-div expand */
-  align-self: flex-start;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
 .nav-active {
@@ -633,7 +653,12 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #04AA6D;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2572b9;
+  margin-top: 80px;
+  width: 300px;
   color: rgb(255, 255, 255);
   padding: 12px 20px;
   border: none;
@@ -643,17 +668,10 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #1c3892;
 }
 
-/* Add a background color and some padding around the form */
-.form__container {
-  border-radius: 5px;
-  background-color: #f2f2f24d;
-  padding: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
+
 
 
 
@@ -661,7 +679,7 @@ input[type=submit]:hover {
   margin-top: 60px; 
   margin-left:30px; 
   margin-right: 30px; 
-  background-color: lightseagreen; 
+  background-color: #2572b9;
   border: 3px solid black; 
   text-decoration: none; 
   text-align: center; 
